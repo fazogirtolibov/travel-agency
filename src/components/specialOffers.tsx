@@ -40,7 +40,7 @@ export default function SpecialOffers() {
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{
               clickable: true,
-              el: '.swiper-pagination', // Link pagination to the external div
+              el: '.swiper-pagination', // Link pagination to the external div 
             }}
             spaceBetween={20}
             slidesPerView={1}
