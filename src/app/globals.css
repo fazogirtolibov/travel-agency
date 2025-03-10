@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --trevland-blue: #1a2a6c;
+    --trevland-red: #C9453B;
+    --trevland-gray: #2694990A;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  /* padding-top: 6rem; */
+}
