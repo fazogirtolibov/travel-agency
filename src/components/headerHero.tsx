@@ -33,16 +33,16 @@ export default function HeaderHero() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerHeight = window.innerHeight; // Height of the HeaderHero (100vh)
+      const headerHeight = window.innerHeight; 
       if (window.scrollY > headerHeight) {
-        setIsScrolled(true); // Scrolled past the HeaderHero
+        setIsScrolled(true); 
       } else {
-        setIsScrolled(false); // Still within the HeaderHero
+        setIsScrolled(false); 
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll); // Cleanup on unmount
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   
@@ -69,7 +69,7 @@ export default function HeaderHero() {
       </div>
       <div className="relative w-full h-[100vh] flex flex-col">
         {/* Fixed Navbar Section */}
-        <div className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-[var(--trevland-gray)] text-white'}`}> {/* fixed qilmadim chunki designga to'gri kelmayapti scroll down qilganda */}
+        <div className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-[var(--trevland-gray)] text-white'}`}> 
           <div className="p-6">
             <div className="container m-auto px-4 sm:px-6 md: flex justify-between items-center relative z-10">
               <h1 className={`text-2xl font-bold ${ribeye.className}`}>Trevland</h1>
