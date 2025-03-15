@@ -2,18 +2,18 @@
 
 import Image from 'next/image';
 import { Gelasio } from 'next/font/google';
-import { Roboto } from "next/font/google";
+import { Roboto } from 'next/font/google';
 
 const gelasio = Gelasio({
   subsets: ['latin'],
   display: 'swap',
-  weight: '400'
+  weight: '400',
 });
 
 const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
-  weight: '400'
+  weight: '400',
 });
 
 type BlogPost = {
@@ -36,23 +36,41 @@ export default function BlogNews() {
       <div className="container mx-auto">
         <h2 className={`${gelasio.className} text-5xl mb-6 text-center`}>From Blog & News</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>Welcome to Community Conversations, a new interview series featuring intrepid travellers, creatives and activists in our community.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-          {posts.map((post, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col sm:flex-row">
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={300}
-                height={192}
-                className="w-full sm:w-1/2 object-cover"
-              />
-              <div className="p-4 w-full sm:w-1/2">
-                <h3 className={`${gelasio.className} text-xl mb-2 text-center sm:text-left line-clamp-2`}>{post.title}</h3>
-                <p className="text-gray-600 mb-2 line-clamp-2">{post.description}</p>
-                <p className="text-sm line-clamp-2">{post.author}</p>
-              </div>
+        <div className="flex flex-col md:flex-row gap-3">
+          {/* Large Card (Left) */}
+          <div className="w-full md:w-1/2 overflow-hidden">
+            <Image
+              src={posts[0].image}
+              alt={posts[0].title}
+              width={570}
+              height={420}
+              className="p-4 object-contain"
+            />
+            <div className='p-4'>
+              <h3 className={`${gelasio.className} text-xl mb-2 text-center md:text-left line-clamp-2`}>{posts[0].title}</h3>
+              <p className={`${roboto.className} text-gray-500 mb-2`}>{posts[0].description}</p>
+              <p className={`${roboto.className} text-sm line-clamp-1`}>{posts[0].author}</p>
             </div>
-          ))}
+          </div>
+          {/* Smaller Cards (Right Column) */}
+          <div className="p-4 w-full md:w-1/2 flex flex-col gap-6">
+            {posts.slice(1, 4).map((post, index) => (
+              <div key={index} className="flex max-[480px]:flex-col md:flex-col lg:flex-row overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={260}
+                  height={200}
+                  className="h-[150px] md:h-[200px] w-[200px] md:w-[260px] object-contain"
+                />
+                <div className="p-4 max-[480px]:px-0 md:px-0 lg:px-4">
+                  <h3 className={`${gelasio.className} text-xl mb-2 md:text-left line-clamp-2`}>{post.title}</h3>
+                  <p className={`${roboto.className} text-gray-600 mb-2 line-clamp-2`}>{post.description}</p>
+                  <p className={`${roboto.className} text-sm line-clamp-1`}>{post.author}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

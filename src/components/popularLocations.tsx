@@ -32,7 +32,7 @@ export default function PopularLocations() {
   ];
 
   return (
-    <section id="popular-locations" className="py-12 mx-6">
+    <section id="popular-locations" className="py-32 mx-6">
       <div className="container mx-auto">
         <h2 className={`${gelasio.className} text-5xl mb-6 text-center`}>Popular Location</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers—from island hopping in the</p>
@@ -40,7 +40,7 @@ export default function PopularLocations() {
           {locations.map((location, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg hover:border-gray-300 hover:scale-105 transition-transform duration-300 max-w-[300px] sm:max-w-[300px]  md:max-w-[360px] max-h-[400px] sm:max-h-[400px] md:max-h-[500px]"
+              className="mx-auto bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg hover:border-gray-300 hover:scale-105 transition-transform duration-300 max-w-[300px] sm:max-w-[300px]  md:max-w-[360px] max-h-[400px] sm:max-h-[400px] md:max-h-[500px]"
               style={{ width: '360px', height: '500px' }} 
             >
               <Image
