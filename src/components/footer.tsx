@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { Ribeye } from "next/font/google";
 import { Roboto } from "next/font/google";
 
@@ -9,7 +8,6 @@ const ribeye = Ribeye({ subsets: ['latin'], display: 'swap', weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], display: 'swap', weight: '400' });
 
 export default function Footer() {
-  const router = useRouter();
 
   return (
     <footer id="footer" className="py-20 bg-[var(--trevland-gray)]">
