@@ -3,10 +3,8 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Ribeye } from "next/font/google";
-import { Gelasio } from 'next/font/google';
 import { Roboto } from "next/font/google";
 
-const gelasio = Gelasio({ subsets: ['latin'], display: 'swap', weight: '400' });
 const ribeye = Ribeye({ subsets: ['latin'], display: 'swap', weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], display: 'swap', weight: '400' });
 
