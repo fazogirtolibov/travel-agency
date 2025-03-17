@@ -32,11 +32,11 @@ export default function BlogNews() {
   ];
 
   return (
-    <section id="blog-news" className="py-12 mx-6">
-      <div className="container mx-auto">
-        <h2 className={`${gelasio.className} text-5xl mb-6 text-center`}>From Blog & News</h2>
+    <section id="blog-news" className="py-12 mx-4">
+      <div className="container mx-auto w-full md:w-6xl">
+        <h2 className={`${gelasio.className} text-3xl md:text-5xl mb-6 text-center`}>From Blog & News</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>Welcome to Community Conversations, a new interview series featuring intrepid travellers, creatives and activists in our community.</p>
-        <div className="flex flex-col md:flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3 justify-center">
           {/* Large Card (Left) */}
           <div className="w-full md:w-1/2 overflow-hidden">
             <Image

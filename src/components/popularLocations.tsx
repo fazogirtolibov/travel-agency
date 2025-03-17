@@ -34,7 +34,7 @@ export default function PopularLocations() {
   return (
     <section id="popular-locations" className="py-32 mx-6">
       <div className="container mx-auto">
-        <h2 className={`${gelasio.className} text-5xl mb-6 text-center`}>Popular Location</h2>
+        <h2 className={`${gelasio.className} text-3xl md:text-5xl mb-6 text-center`}>Popular Location</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers—from island hopping in the</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-2 gap-3 lg:grid-cols-2 gap-5 xl:grid-cols-3 gap-5">
           {locations.map((location, index) => (

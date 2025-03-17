@@ -33,8 +33,7 @@ export default function HeaderHero() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerHeight = window.innerHeight; 
-      if (window.scrollY > headerHeight) {
+      if (window.scrollY > 0) {
         setIsScrolled(true); 
       } else {
         setIsScrolled(false); 
@@ -42,7 +41,7 @@ export default function HeaderHero() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll); 
   }, []);
 
   
@@ -70,16 +69,16 @@ export default function HeaderHero() {
       <div className="relative w-full h-[100vh] flex flex-col">
         {/* Fixed Navbar Section */}
         <div className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-[var(--trevland-gray)] text-white'}`}> 
-          <div className="p-6">
-            <div className="container m-auto px-4 sm:px-6 md: flex justify-between items-center relative z-10">
+          <div className="p-4">
+            <div className="container m-auto px-4 md:px-3 lg: flex justify-between items-center relative z-10">
               <h1 className={`text-2xl font-bold ${ribeye.className}`}>Trevland</h1>
-              <nav className="hidden sm:flex">
+              <nav className="hidden md:flex">
                 <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                  <li className='mr-0 sm:mr-10'><a href="#header" className={`hover:underline ${roboto.className} text-sm`}>Home</a></li>
-                  <li className='mr-0 sm:mr-10'><a href="#popular-locations" className={`hover:underline ${roboto.className}`}>Location</a></li>
-                  <li className='mr-0 sm:mr-10'><a href="#special-offers" className={`hover:underline ${roboto.className}`}>Blog</a></li>
-                  <li className='mr-0 sm:mr-10'><a href="#blog-news" className={`hover:underline ${roboto.className}`}>About</a></li>
-                  <li className='mr-0 sm:mr-10'><a href="#footer" className={`hover:underline ${roboto.className}`}>Contact</a></li>
+                  <li className={`py-2 px-4${isScrolled ? ' shadow-md rounded' : ''}`}><a href="#header" className={`hover:underline ${roboto.className} text-sm`}>Home</a></li>
+                  <li className={`py-2 px-4${isScrolled ? ' shadow-md rounded' : ''}`}><a href="#popular-locations" className={`hover:underline ${roboto.className}`}>Location</a></li>
+                  <li className={`py-2 px-4${isScrolled ? ' shadow-md rounded' : ''}`}><a href="#special-offers" className={`hover:underline ${roboto.className}`}>Blog</a></li>
+                  <li className={`py-2 px-4${isScrolled ? ' shadow-md rounded' : ''}`}><a href="#blog-news" className={`hover:underline ${roboto.className}`}>About</a></li>
+                  <li className={`py-2 px-4${isScrolled ? ' shadow-md rounded' : ''}`}><a href="#footer" className={`hover:underline ${roboto.className}`}>Contact</a></li>
                 </ul>
               </nav>
               <button
@@ -89,7 +88,7 @@ export default function HeaderHero() {
                 Booking now
               </button>
               {/* Burger Menu */}
-              <div className="sm:hidden">
+              <div className="md:hidden">
                 <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -98,8 +97,8 @@ export default function HeaderHero() {
               </div>
               {/* Mobile Menu */}
               {isOpen && (
-                <div className="sm:hidden absolute top-16 right-4 w-48 bg-[var(--trevland-blue)] rounded-lg shadow-lg z-20">
-                  <ul className="flex flex-col space-y-2 p-4">
+                <div className="md:hidden absolute top-16 right-4 w-48 bg-[var(--trevland-blue)] rounded-lg shadow-lg z-20">
+                  <ul className="flex flex-col space-y-2 p-4 shadow-md">
                     <li><a href="#header" className={`hover:underline ${roboto.className} text-sm text-white`}>Home</a></li>
                     <li><a href="#popular-locations" className={`hover:underline ${roboto.className} text-sm text-white`}>Location</a></li>
                     <li><a href="#special-offers" className={`hover:underline ${roboto.className} text-sm text-white`}>Blog</a></li>

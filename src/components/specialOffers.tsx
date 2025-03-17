@@ -32,7 +32,7 @@ export default function SpecialOffers() {
   return (
     <section id="special-offers" className="py-12 mx-6">
       <div className="container mx-auto">
-        <h2 className={`${gelasio.className} text-5xl mb-6 text-center`}>Special Offers</h2>
+        <h2 className={`${gelasio.className} text-3xl md:text-5xl mb-6 text-center`}>Special Offers</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>With the New Year comes a refreshing sense of wanderlust, a longing in our souls to escape to warmer climates,</p>
         <div className="relative">
           <Swiper
@@ -40,7 +40,7 @@ export default function SpecialOffers() {
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{
               clickable: true,
-              el: '.swiper-pagination', // Link pagination to the external div 
+              el: '.swiper-pagination',
             }}
             spaceBetween={20}
             slidesPerView={1}
