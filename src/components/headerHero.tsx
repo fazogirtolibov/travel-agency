@@ -33,7 +33,7 @@ export default function HeaderHero() {
   const buttonRef = useRef<HTMLButtonElement>(null); // Explicitly typed as HTMLButtonElement
 
   useEffect(() => {
-    const handleScroll = (event: Event) => {
+    const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true); 
       } else {
