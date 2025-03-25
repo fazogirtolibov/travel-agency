@@ -10,7 +10,7 @@ const roboto = Roboto({ subsets: ['latin'], display: 'swap', weight: '400' });
 export default function Footer() {
 
   return (
-    <footer id="footer" className="py-20 bg-[var(--trevland-gray)]">
+    <footer id="footer" className="py-8 md:py-20 bg-[var(--trevland-gray)]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           <div className="text-center md:text-left">
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
           <div className="text-center md:text-left">
             <h3 className={`text-xl font-bold mb-4 ${roboto.className}`}>SUBSCRIBE NOW</h3>
-            <form className="flex flex-col sm:flex-row items-center justify-center md:justify-start">
+            <form className="flex flex-row items-center justify-center md:justify-start">
               <input
                 type="email"
                 placeholder="Email"

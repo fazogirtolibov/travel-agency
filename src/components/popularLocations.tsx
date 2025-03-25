@@ -32,7 +32,7 @@ export default function PopularLocations() {
   ];
 
   return (
-    <section id="popular-locations" className="py-32 mx-6">
+    <section id="popular-locations" className="py-10 md:py-32 mx-4">
       <div className="container mx-auto">
         <h2 className={`${gelasio.className} text-3xl md:text-5xl mb-6 text-center`}>Popular Location</h2>
         <p className={`${roboto.className} text-gray-500 mb-8 text-center`}>For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers—from island hopping in the</p>
